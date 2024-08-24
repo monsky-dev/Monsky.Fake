@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>Monsky.Fake</PackageId>
+    <Version>0.0.1</Version>
+    <Authors>Alexander Monsky</Authors>
+    <Description>A simple random data generator library that allows you to create random strings, numbers, dates, and more for testing or simulation purposes. Perfect for developers needing flexible data generation for unit tests, mock data, or prototyping.</Description>
+    <RepositoryUrl>https://github.com/monsky-dev/Monsky.Dev.Randomizer</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/monsky-dev/Monsky.Dev.Randomizer</PackageProjectUrl>
+    <PackageTags>random;randomizer;data generator;testing;mock data;unit testing;simulation;fakes</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Data\Domains.json" />
+    <None Remove="Data\FirstNames.json" />
+    <None Remove="Data\LastNames.json" />
+    <None Remove="Data\Words.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Data\Domains.json" />
+    <EmbeddedResource Include="Data\FirstNames.json" />
+    <EmbeddedResource Include="Data\LastNames.json" />
+    <EmbeddedResource Include="Data\Words.json" />
+  </ItemGroup>
+</Project>
