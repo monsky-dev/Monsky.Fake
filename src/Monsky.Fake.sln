@@ -5,7 +5,7 @@ VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Monsky.Fake", "Monsky.Fake\Monsky.Fake.csproj", "{7CEBE132-A35F-4779-B923-FE774F75B6E1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Monsky.Fake.Tests", "Monsky.Fake.Test\Monsky.Fake.Tests.csproj", "{BB5A8E1B-1D6A-4B02-A421-D5C03B8EA5D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Monsky.Fake.Tests", "Monsky.Fake.Tests\Monsky.Fake.Tests.csproj", "{BB5A8E1B-1D6A-4B02-A421-D5C03B8EA5D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

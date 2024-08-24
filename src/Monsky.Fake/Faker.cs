@@ -143,7 +143,7 @@ public sealed class Faker
         var assembly = Assembly.GetExecutingAssembly();
         var fullResourceName = $"Monsky.Fake.Data.{resourceName}";
 
-        using Stream stream = assembly.GetManifestResourceStream(fullResourceName);
+        using Stream? stream = assembly.GetManifestResourceStream(fullResourceName);
         if (stream == null)
             throw new FileNotFoundException($"Embedded resource '{fullResourceName}' not found.");
 

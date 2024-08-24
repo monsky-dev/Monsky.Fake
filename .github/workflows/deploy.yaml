@@ -2,8 +2,6 @@ name: Publish NuGet Package
 
 on:
   push:
-    branches:
-      - main
     tags:
       - "v*.*.*"
 
@@ -11,7 +9,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     env:
-      PROJECT_PATH: ./src
+      PROJECT_PATH: ./src/Monsky.Fake
 
     steps:
       - uses: actions/checkout@v3

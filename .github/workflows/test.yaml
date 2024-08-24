@@ -21,14 +21,17 @@ jobs:
         with:
           dotnet-version: "8.x"
 
-      # Install dependencies (restore)
+      # Restore dependencies for the solution
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore Monsky.Fake.sln
+        working-directory: ${{ vars.WORKING_DIRECTORY }}
 
       # Build the solution
       - name: Build solution
-        run: dotnet build --no-restore --configuration Release
+        run: dotnet build Monsky.Fake.sln --no-restore --configuration Release
+        working-directory: ${{ vars.WORKING_DIRECTORY }}
 
       # Run tests
       - name: Run tests
-        run: dotnet test Monsky.Fake.Tests --no-build --verbosity normal --configuration Release
+        run: dotnet test Monsky.Fake.sln --no-build --verbosity normal --configuration Release
+        working-directory: ${{ vars.WORKING_DIRECTORY }}

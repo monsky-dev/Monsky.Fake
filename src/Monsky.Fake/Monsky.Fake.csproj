@@ -8,9 +8,9 @@
     <Version>0.0.1</Version>
     <Authors>Alexander Monsky</Authors>
     <Description>A simple random data generator library that allows you to create random strings, numbers, dates, and more for testing or simulation purposes. Perfect for developers needing flexible data generation for unit tests, mock data, or prototyping.</Description>
-    <RepositoryUrl>https://github.com/monsky-dev/Monsky.Dev.Randomizer</RepositoryUrl>
+    <RepositoryUrl>https://github.com/monsky-dev/Monsky.Fake</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/monsky-dev/Monsky.Dev.Randomizer</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/monsky-dev/Monsky.Fake</PackageProjectUrl>
     <PackageTags>random;randomizer;data generator;testing;mock data;unit testing;simulation;fakes</PackageTags>
   </PropertyGroup>
 
