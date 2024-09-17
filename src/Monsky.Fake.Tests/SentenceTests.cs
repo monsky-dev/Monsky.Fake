@@ -8,7 +8,7 @@
         [InlineData(10, 10)]
         [InlineData(100, 100)]
         [InlineData(5000, 5000)]
-        public void GenerateSentence(int count, int expected)
+        public void GenerateSentence(uint count, int expected)
         {
             var sentence = Faker.Sentence(count);
 

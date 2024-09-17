@@ -3,6 +3,7 @@
     public class IdTests
     {
         private const string guidPattern = @"^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$";
+        private const string reverseGuidPattern = @"^[a-fA-F0-9]{12}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{8}$";
         private const string defaultIdPattern = @"^\d{5}-\d[A-Z]\d[A-Z]-[A-Z]\d[A-Z]\d-[A-Z]{2}$";
 
         [Fact]
@@ -28,6 +29,16 @@
         }
 
         [Fact]
+        public void GenerateReverseGuidString()
+        {
+            var guid = Faker.ReverseGuidString();
+
+            Assert.IsType<string>(guid);
+            Assert.Equal(36, guid.Length);
+            Assert.Matches(reverseGuidPattern, guid);
+        }
+
+        [Fact]
         public void GenerateId()
         {
             var id = Faker.Id();
@@ -37,13 +48,27 @@
         }
 
         [Theory]
+        [InlineData(44)]
+        [InlineData(22)]
+        [InlineData(256)]
+        [InlineData(0)]
+        public void GenerateIdCustomLength(int length)
+        {
+            var id = Faker.Id(56);
+
+            Assert.IsType<string>(id);
+            Assert.Equal(56, id.Length);
+            Assert.Matches("^[a-zA-Z0-9]+$", id);
+        }
+
+        [Theory]
         [InlineData("")]
         [InlineData(" ")]
         [InlineData("     ")]
         [InlineData(null)]
         public void GenerateId_InvalidPattern_UseDefaultPattern(string? pattern)
         {
-            var id = Faker.Id(pattern);
+            var id = Faker.Id(pattern!);
 
             Assert.IsType<string>(id);
             Assert.Matches(defaultIdPattern, id);

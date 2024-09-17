@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>Monsky.Fake</PackageId>
-    <Version>0.2.0</Version>
+    <Version>0.3.0</Version>
     <Authors>Alexander Monsky</Authors>
     <Description>A simple random data generator library that allows you to create random strings,
       numbers, dates, and more for testing or simulation purposes. Perfect for developers needing
